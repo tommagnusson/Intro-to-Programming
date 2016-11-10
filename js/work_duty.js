@@ -7,18 +7,18 @@ function onload() {
 }
 
 function renderDutiesBookStore() {
-  
+
   var numDuties = document.getElementById("stepper").value;
-  
+
   var arrNumDuties = [];
-  for(var i = 0; i<numDuties; i++) {
+  for(var i = 0; i < numDuties; i++) {
     arrNumDuties.push(i);
   }
-  
+
   var duties = arrNumDuties.map((a) => dutiesBookStore[a]);
   var para = document.getElementById("dutiesHere");
   para.innerHTML = duties.join(", ");
-  
+
   var button = document.getElementById("buttonBookStore");
   button.setAttribute("disabled", "disabled");
 }
