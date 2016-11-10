@@ -7,7 +7,6 @@ function onload() {
 }
 
 function renderDutiesBookStore() {
-
   var numDuties = document.getElementById("stepper").value;
 
   var arrNumDuties = [];
