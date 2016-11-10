@@ -1,0 +1,77 @@
+h1 {
+  text-align: center;
+}
+
+.background {
+  background-color: #e9ebee;
+}
+
+/* White background to host the three divs */
+.mainsplash {
+  background-color: #ffffff;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 400px;
+}
+
+/* Centers the element horizontally */
+.horizontalcenter {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* One of the three divs in the middle */
+.content {
+  background-color: white;
+  float: left;
+  text-align: center;
+  border: 1px solid gray;
+  border-left: none;
+  height: 300px;
+}
+
+/* CSS Rules specific to each of the content divs*/
+#left {
+  width: 24%;
+  border-left: 1px solid gray;
+}
+#middle {
+  width: 37.4%; /* To account for the 1 px borders */
+}
+#right {
+  width: 37.5%;
+}
+
+#emailme {
+  text-align: center;
+  clear: left;
+}
+/* Links */
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: #90949c;
+}
+a:link {
+  color: #3b5998;
+}
+a:active {
+  color: #17233d;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Properly Centering Images */
+img.displayed {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+/* Background image */
+body {
+  background-image: url(geometric-pattern-background-blue.jpg);
+  background-repeat: repeat;
+}

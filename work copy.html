@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html onload="onload()">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Tommy's Resume's Using External</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="background">
+
+    <!-- Tommy's Resume header div -->
+    <div>
+      <img class="displayed" alt="Tommy Magnusson's Resume" src="header.png">
+    </div>
+
+    <!-- Center main backdrop div, main splash -->
+    <div class="mainsplash">
+      <h1>
+        Work
+      </h1>
+
+      <!-- 3 div wrapper -->
+      <div class="horizontalcenter">
+
+        <!-- Left box with links -->
+        <div class="content" id="left">
+          <h2>
+            Other Pages
+          </h2>
+
+          <p><a href="education.html">Education</a></p>
+          <p><a href="work.html">Work</a></p>
+          <p><a href="awards.html">Awards</a></p>
+
+        </div>
+
+        <!-- Center box, main info -->
+        <div class="content" id="middle">
+          <h2>
+            Fairfield University
+          </h2>
+          <p>
+            Sales Associate
+          </p>
+          <p>
+            <a href="www.fairfieldbooks.bkstr.com/">Fairfield University Book Store</a>
+          </p>
+          <p>
+            Helped customers with textbook orders as well as find trade books
+          </p>
+          
+          <p>
+            # of Job Duties:
+          </p>
+          <input type="number" value="0" id="stepper"/>
+          <button type="button" id="buttonBookStore" onclick="renderDutiesBookStore()" >Submit</button>
+          
+          <p id="dutiesHere">
+            
+          </p>
+          
+        </div>
+
+        <!-- Right box, side info -->
+        <div class="content" id="right">
+          <h2>
+            News America Marketing
+          </h2>
+          <p>
+            Mobile Developer Intern
+          </p>
+          <p>
+            <a href="https://www.newsamerica.com/">News America Marketing, IT Department</a>
+          </p>
+          <p>
+            Worked on the <a href="http://www.smartsource.com/">SmartSource</a> mobile application for iOS
+          </p>
+        </div>
+
+      </div> <!-- End 3 div wrapper -->
+      <p id="emailme">
+        <a href="mailto:tommagnuss@gmail.com">Email me here</a> - 
+        <a href="http://www.publicdomainpictures.net/view-image.php?image=54002">Background Image courtesy of Karen Arnold </a>
+      </p>
+      <p>
+        
+      </p>
+    </div>
+    <script src="work_duty.js"></script>
+  </body>
+</html>
