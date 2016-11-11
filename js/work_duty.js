@@ -27,3 +27,14 @@ function renderDutiesBookStore() {
 
   para.innerHTML = duties.join(", "); // formatting, nicely joined by ", "
 }
+
+// Help us with the calculator.html
+
+const weeksPerYear = 52;
+function calculateWage() {
+  var hours = parseFloat(document.getElementById("numberOfHoursWorked").value);
+  var wage = parseFloat(document.getElementById("hourlyWage").value);
+  var salary = hours*wage*weeksPerYear;
+  salary = salary.toFixed(2); // rounding to 2 decimal places, rounds up
+  document.getElementById("salary").innerHTML = salary;
+}
