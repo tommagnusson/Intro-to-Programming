@@ -54,10 +54,11 @@
           <p>
             # of Job Duties:
           </p>
-          <input type="number" value="0" id="stepper"/>
-          <button type="button" id="buttonBookStore" onclick="renderDutiesBookStore()" >Submit</button>
+          <input type="number" value="0" id="stepperBookStore"/>
+          <!-- Input the name of the section we're in so we only need one function for both jobs -->
+          <button type="button" id="buttonBookStore" onclick="renderDuties('BookStore')" >Submit</button>
 
-          <p id="dutiesHere">
+          <p id="dutiesHereBookStore">
 
           </p>
 
@@ -76,6 +77,16 @@
           </p>
           <p>
             Worked on the <a href="http://www.smartsource.com/">SmartSource</a> mobile application for iOS
+          </p>
+
+          <p>
+            # of Job Duties:
+          </p>
+          <input type="number" value="0" id="stepperNam"/>
+          <button type="button" id="buttonNam" onclick="renderDuties('Nam')" >Submit</button>
+
+          <p id="dutiesHereNam">
+
           </p>
         </div>
 

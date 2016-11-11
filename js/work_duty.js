@@ -1,4 +1,5 @@
 const dutiesBookStore = ["Register", "Textbooks", "Bathroom Cleaning", "Helping Customers", "Alphabetizing Books"];
+const dutiesNam = ["Commit code", "Chat with boss", "Read Objective-C (ew)", "Figure out ReactSwift", "Make a switch game"];
 
 function onload() {
   // TODO:
@@ -15,7 +16,7 @@ function renderDutiesBookStore() {
 
   var numDuties = document.getElementById("stepper").value;
 
-  var arrNumDuties = [];
+  var arrNumDuties = []; // to hold duty strings later
 
   // make the array 0..<stepper value
   for(var i = 0; i < numDuties; i++) {
@@ -26,6 +27,46 @@ function renderDutiesBookStore() {
   var duties = arrNumDuties.map((a) => dutiesBookStore[a]);
 
   para.innerHTML = duties.join(", "); // formatting, nicely joined by ", "
+}
+
+function renderDutiesNam() {
+  var para = document.getElementById("namDutiesHere");
+  para.innerHTML = ""; // clear previous duties
+
+  var numDuties = document.getElementById("nameStepper").value;
+  var arrNumDuties = []; // to hold duty strings later
+
+  for(var i = 0; i < numDuties; i++) {
+    arrNumDuties.push(i);
+  }
+
+  var duties = arrNumDuties.map((a) => dutiesNam[a]);
+
+  para.innerHTML = duties.join(", "); // nice formatting
+}
+
+function renderDuties(job) {
+  var para = document.getElementById("dutiesHere" + job);
+  para.innerHTML = ""; // clear the previous duties (if any)
+
+  var numDuties = document.getElementById("stepper" + job).value;
+
+  var arrNumDuties = []; // to hold duty strings later
+
+  // make the array 0..<stepper value
+  for(var i = 0; i < numDuties; i++) {
+    arrNumDuties.push(i);
+  }
+
+  // select which duties we need based on input
+  var dutiesTemplate;
+  if(job == "BookStore") { dutiesTemplate = dutiesBookStore; }
+  else { dutiesTemplate = dutiesNam; }
+  // map the corresponding indexes to the duties from the duties array
+  var duties = arrNumDuties.map((a) => dutiesTemplate[a]);
+
+  para.innerHTML = duties.join(", "); // formatting, nicely joined by ", "
+
 }
 
 // Help us with the calculator.html
