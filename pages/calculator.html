@@ -9,16 +9,6 @@
   </head>
   <body class="background">
 
-    <script type="text/javascript">
-      function calculateWage() {
-        var hours = parseFloat(document.getElementById("numberOfHoursWorked").value);
-        var weeklyMoney = parseFloat(document.getElementById("amountOfMoneyThisWeek").value);
-        var wage = weeklyMoney/hours;
-        wage = wage.toFixed(2); // rounding to 2 decimal places, rounds up
-        document.getElementById("wage").innerHTML = wage;
-      }
-    </script>
-
     <!-- Tommy's Resume header div -->
     <div>
       <h1>
@@ -44,22 +34,30 @@
           <p><a href="education.html">Education</a></p>
           <p><a href="work.html">Work</a></p>
           <p><a href="awards.html">Awards</a></p>
-          <p><a href="#">Wage Calculator</a></p>
+          <p><a href="calculator.html">Wage Calculator</a></p>
 
         </div>
 
         <!-- Center box, main info -->
         <div class="content" id="middle">
-          <h1>Wage Calculator</h1>
+          <h1>Salary Calculator</h1>
+
+          <!--
+            Given: hours, wage
+            Constant: weeks per year
+            Salary = hours * weeks per year * wage
+         -->
 
           <p>Please enter the number of hours you've worked this week:</p>
-          <input type="text" id="numberOfHoursWorked"/>
+          <input type="number" id="numberOfHoursWorked"/>
 
-          <p>Please enter the amount of money you got paid this week:</p>
-          <input type="text" id="amountOfMoneyThisWeek"/>
+          <p>Please enter your hourly wage:</p>
+          <input type="number" id="hourlyWage"/>
           <input type="button" value="Calculate" onclick="calculateWage()" />
-          <p>Hourly wage: $<span id="wage">0</span></p>
-
+          <p>Salary: $<span id="salary">0</span></p>
+          <p>The salary is <span id="goldilocks">unknown</span>.</p>
+          <!-- The span is the place the salary goes which is calculated in the work_duty.js file -->
+          <!-- Goldilocks is kind of funny, right? Just right? Too little? Too much? -->
         </div>
 
         <!-- Right box, side info -->
@@ -71,6 +69,6 @@
         <a href="mailto:tommagnuss@gmail.com">Email me here</a>
       </p>
     </div>
-
+    <script src="../js/work_duty.js"></script>
   </body>
 </html>
