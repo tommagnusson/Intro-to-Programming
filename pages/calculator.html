@@ -49,13 +49,15 @@
          -->
 
           <p>Please enter the number of hours you've worked this week:</p>
-          <input type="text" id="numberOfHoursWorked"/>
+          <input type="number" id="numberOfHoursWorked"/>
 
           <p>Please enter your hourly wage:</p>
-          <input type="text" id="hourlyWage"/>
+          <input type="number" id="hourlyWage"/>
           <input type="button" value="Calculate" onclick="calculateWage()" />
           <p>Salary: $<span id="salary">0</span></p>
+          <p>The salary is <span id="goldilocks">unknown</span>.</p>
           <!-- The span is the place the salary goes which is calculated in the work_duty.js file -->
+          <!-- Goldilocks is kind of funny, right? Just right? Too little? Too much? -->
         </div>
 
         <!-- Right box, side info -->

@@ -37,4 +37,17 @@ function calculateWage() {
   var salary = hours*wage*weeksPerYear;
   salary = salary.toFixed(2); // rounding to 2 decimal places, rounds up
   document.getElementById("salary").innerHTML = salary;
+
+  // Determine if salary is enough
+
+  var enough = "not enough";
+  if(salary < 20000) {
+    enough = "not enough";
+  } else if(salary <= 25000){
+    enough = "almost enough";
+  } else {
+    enough = "enough";
+  }
+  // message right below the wage display
+  document.getElementById("goldilocks").innerHTML = enough;
 }
