@@ -32,6 +32,8 @@ function renderDutiesBookStore() {
 
 const weeksPerYear = 52;
 function calculateWage() {
+
+  // hours times wage time weeks in the year (which is a constant)
   var hours = parseFloat(document.getElementById("numberOfHoursWorked").value);
   var wage = parseFloat(document.getElementById("hourlyWage").value);
   var salary = hours*wage*weeksPerYear;
