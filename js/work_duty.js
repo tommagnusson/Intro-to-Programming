@@ -3,7 +3,12 @@ const dutiesNam = ["Commit code", "Chat with boss", "Read Objective-C (ew)", "Fi
 
 // help us with date and time stuff
 function onload() {
-  var hours = (new Date()).getHours(); // obtain current hours
+  renderTimeMessage((new Date()).getHours()); // renders our time message based on current time
+}
+
+// renders a time specific message for the user in the left most div at the bottom
+// using an h3 tag.
+function renderTimeMessage(hours) {
   var timeMessage = ""; // to  be inserted into the top of the html
 
   // Appropriate message based on the time of day
@@ -15,8 +20,12 @@ function onload() {
     timeMessage = "Have a good evening";
   }
 
-  var messageElement = document.getElementById("dateTimeMessage"); // get our empty h3
-  messageElement.innerHTML = timeMessage; // insert our message in the h3
+  var timeMessageElement = document.createElement("h3"); // create h3
+  var timeMessageTextNode = document.createTextNode(timeMessage); // make text node out of message
+  timeMessageElement.appendChild(timeMessageTextNode); // link text node to h3
+
+  var leftDivElement = document.getElementById("left"); // get the leftmost div
+  leftDivElement.appendChild(timeMessageElement); // add our h3 (including our message) to the div
 }
 
 function renderDutiesBookStore() {
