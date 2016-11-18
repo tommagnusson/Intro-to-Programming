@@ -1,13 +1,22 @@
 const dutiesBookStore = ["Register", "Textbooks", "Bathroom Cleaning", "Helping Customers", "Alphabetizing Books"];
 const dutiesNam = ["Commit code", "Chat with boss", "Read Objective-C (ew)", "Figure out ReactSwift", "Make a switch game"];
 
+// help us with date and time stuff
 function onload() {
-  // TODO:
-  // var stepper = document.getElementById("stepper");
-  //
-  // // Dynamically make sure max is at most the amount of jobs in the array
-  // stepper.setAttribute("max", String(dutiesBookStore.length));
-  // stepper.setAttribute("min", String(0));
+  var hours = (new Date()).getHours(); // obtain current hours
+  var timeMessage = ""; // to  be inserted into the top of the html
+
+  // Appropriate message based on the time of day
+  if (hours < 12) {
+    timeMessage = "Enjoy the rest of your morning";
+  } else if (hours < 17) {
+    timeMessage = "Enjoy the afternoon";
+  } else {
+    timeMessage = "Have a good evening";
+  }
+
+  var messageElement = document.getElementById("dateTimeMessage"); // get our empty h3
+  messageElement.innerHTML = timeMessage; // insert our message in the h3
 }
 
 function renderDutiesBookStore() {
