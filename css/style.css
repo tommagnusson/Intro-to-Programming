@@ -46,6 +46,12 @@ h1 {
   text-align: center;
   clear: left;
 }
+
+/* Google Maps */
+#map {
+  height: inherit;
+}
+
 /* Links */
 a {
   text-decoration: none;
@@ -72,6 +78,6 @@ img.displayed {
 
 /* Background image */
 body {
-  background-image: url(geometric-pattern-background-blue.jpg);
+  /*background-image: url(geometric-pattern-background-blue.jpg);*/
   background-repeat: repeat;
 }
